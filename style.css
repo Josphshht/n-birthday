@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide scrollbars */
+    background-color: #000; /* Ensure black background for seamless full-screen */
+}
+
+#content-container {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox for centering/covering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Styles for the full-screen video */
+#birthday-video {
+    position: absolute; /* Position absolutely to cover */
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Send to back so it doesn't interfere with potential future elements */
+    background-size: cover; /* Cover the entire container */
+    overflow: hidden; /* Prevent video overflow */
+}
+
+/* Styles for the full-screen image */
+#door-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container without distortion */
+    display: block; /* Remove extra space below image */
+}
